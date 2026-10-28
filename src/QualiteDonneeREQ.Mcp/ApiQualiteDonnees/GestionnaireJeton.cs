@@ -57,6 +57,8 @@ public sealed class GestionnaireJeton : DelegatingHandler
                     throw new InvalidOperationException("Impossible d'obtenir un jeton d'authentification pour l'API de qualite de donnees");
                 }
             }
+
+            semaphore.Release();
         }
 
         request.Headers.Authorization =

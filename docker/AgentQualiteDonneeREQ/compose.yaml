@@ -13,7 +13,7 @@ services:
   keycloak:
     container_name: keycloak
     image: quay.io/keycloak/keycloak:26.7.3
-    command: start-dev
+    command: start-dev --import-realm
     environment:
       - KC_BOOTSTRAP_ADMIN_USERNAME=admin
       - KC_BOOTSTRAP_ADMIN_PASSWORD=Baloney123!
@@ -29,9 +29,12 @@ services:
       - keycloak_postgres
     ports:
       - "8080:8080"
+    volumes:
+      - ./req-realm.json:/opt/keycloak/data/import/req-realm.json:ro
     networks:
       - backend
       - frontend
+
 volumes:
   keycloak_postgres_data:
     driver: local

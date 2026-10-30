@@ -1,5 +1,6 @@
 <Solution>
   <Folder Name="/src/">
+    <Project Path="src/QualiteDonneeREQ.AgentLoop/QualiteDonneeREQ.AgentLoop.csproj" />
     <Project Path="src/QualiteDonneeREQ.Api/QualiteDonneeREQ.Api.csproj" />
     <Project Path="src/QualiteDonneeREQ.Mcp/QualiteDonneeREQ.Mcp.csproj" />
   </Folder>

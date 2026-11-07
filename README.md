@@ -10,6 +10,8 @@ De nombreux coins ronds ont été pris ici pour faire plus vite. L'objectif n'es
 
 ## Fonctionnement
 
+![Schéma de la solutiion](./doc/solution.jpg)
+
 Le projet QualiteDonneeREQ.Api simule une API d'un système informatique qu'on pourrait retrouver en entreprise. Il permet d'obtenir des lots d'entreprises dont les adresses n'ont pas encore été structurées et de leur ajouter une adresse structurée.
 
 Le projet QualiteDonneeREQ.Mcp fourni les outils aux modèles IA pour qu'ils puissent utiliser les endpoint du projet API.
@@ -19,6 +21,8 @@ Le projet QualiteDonneeREQ.AgentLoop fait tourner un agent en boucle avec une in
 L'authentification et l'autorisation se font avec Keycloak. Il y a un fichier docker compose dans le répertoire docker pour le provisionner. Il chargera au passage un royaume "REQ" que nous utiliserons dans ce projet.
 
 Pour le modèle IA, on utilise ollama avec qwen3.5:9b.
+
+Si vous voulez tester le MCP seul, vous pouvez utiliser Goose pour prompter Ollama et lui demander de l'utiliser.
 
 # Préparation de la BD
 
